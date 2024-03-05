@@ -12,11 +12,13 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm install'
+                    sh ' node ./src/hello_app.js'
             }
         }
         stage('Test') {
                     steps {
                         sh './jenkins/scripts/test.sh'
+                      
                     }
                 }
                 stage('Deliver') {
