@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm install'
-                    sh ' node ./src/hello_app.js'
+                    sh './src/hello_app.js'
             }
         }
         stage('Test') {
